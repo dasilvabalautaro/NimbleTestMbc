@@ -10,8 +10,15 @@ import SwiftUI
 @main
 struct Nimble_MbcApp: App {
     var body: some Scene {
+        
         WindowGroup {
-            ContentView()
+            ContentView().onDisappear {
+                terminateApp()
+            }
         }
+    }
+    
+    private func terminateApp() {
+        exit(EXIT_SUCCESS)
     }
 }

@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0828D2B72AF891B8006C1A1F /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828D2B62AF891B8006C1A1F /* PageModel.swift */; };
+		0828D2B92AF89C16006C1A1F /* ContentHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828D2B82AF89C16006C1A1F /* ContentHomeView.swift */; };
+		0828D2BB2AF9220C006C1A1F /* ChoiseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828D2BA2AF9220C006C1A1F /* ChoiseView.swift */; };
+		086BDA3A2AF6A87D0049AB28 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086BDA392AF6A87D0049AB28 /* Route.swift */; };
+		086BDA3C2AF6A8F30049AB28 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086BDA3B2AF6A8F30049AB28 /* Coordinator.swift */; };
+		086BDA3E2AF6A9590049AB28 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086BDA3D2AF6A9590049AB28 /* ViewFactory.swift */; };
+		086BDA422AF6AEC70049AB28 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 086BDA412AF6AEC70049AB28 /* Resolver */; };
+		086BDA442AF6B2330049AB28 /* ResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086BDA432AF6B2330049AB28 /* ResetView.swift */; };
+		086BDA462AF6E3AF0049AB28 /* LazyLoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086BDA452AF6E3AF0049AB28 /* LazyLoadView.swift */; };
+		086BDA492AF715D40049AB28 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086BDA482AF715D40049AB28 /* HomeView.swift */; };
+		086BDA4C2AF773A90049AB28 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086BDA4B2AF773A90049AB28 /* DotView.swift */; };
+		086BDA4F2AF792230049AB28 /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086BDA4E2AF792230049AB28 /* SurveyView.swift */; };
+		086BDA512AF799720049AB28 /* StepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086BDA502AF799720049AB28 /* StepsView.swift */; };
+		086BDA892AF7AE590049AB28 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086BDA882AF7AE590049AB28 /* PickerView.swift */; };
+		086BDA8B2AF7E0350049AB28 /* VoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086BDA8A2AF7E0350049AB28 /* VoteView.swift */; };
+		086BDA8D2AF7FBED0049AB28 /* QualifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086BDA8C2AF7FBED0049AB28 /* QualifyView.swift */; };
+		086BDA8F2AF826130049AB28 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086BDA8E2AF826130049AB28 /* QuestionView.swift */; };
+		086BDA922AF880FC0049AB28 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086BDA912AF880FC0049AB28 /* Survey.swift */; };
 		08ED20092AF6042000A9FECF /* Nimble_MbcApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ED20082AF6042000A9FECF /* Nimble_MbcApp.swift */; };
 		08ED200B2AF6042000A9FECF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ED200A2AF6042000A9FECF /* ContentView.swift */; };
 		08ED200D2AF6042100A9FECF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08ED200C2AF6042100A9FECF /* Assets.xcassets */; };
@@ -14,6 +32,13 @@
 		08ED201A2AF6042100A9FECF /* Nimble_MbcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ED20192AF6042100A9FECF /* Nimble_MbcTests.swift */; };
 		08ED20242AF6042100A9FECF /* Nimble_MbcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ED20232AF6042100A9FECF /* Nimble_MbcUITests.swift */; };
 		08ED20262AF6042100A9FECF /* Nimble_MbcUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ED20252AF6042100A9FECF /* Nimble_MbcUITestsLaunchTests.swift */; };
+		08ED20352AF60D8600A9FECF /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ED20342AF60D8600A9FECF /* SplashView.swift */; };
+		08ED20372AF61E5900A9FECF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ED20362AF61E5900A9FECF /* LoginView.swift */; };
+		08ED20452AF6520400A9FECF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ED20442AF6520400A9FECF /* Colors.swift */; };
+		08ED204D2AF6743F00A9FECF /* NeuzeitSLTStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 08ED20492AF6743F00A9FECF /* NeuzeitSLTStd-Book.otf */; };
+		08ED204E2AF6743F00A9FECF /* NeuzeitSLTStd-BookHeavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 08ED204A2AF6743F00A9FECF /* NeuzeitSLTStd-BookHeavy.otf */; };
+		08ED204F2AF6743F00A9FECF /* NeuzeitSLT-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08ED204B2AF6743F00A9FECF /* NeuzeitSLT-Regular.ttf */; };
+		08ED20502AF6743F00A9FECF /* NeuzeitSLT-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08ED204C2AF6743F00A9FECF /* NeuzeitSLT-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +59,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0828D2B62AF891B8006C1A1F /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
+		0828D2B82AF89C16006C1A1F /* ContentHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentHomeView.swift; sourceTree = "<group>"; };
+		0828D2BA2AF9220C006C1A1F /* ChoiseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiseView.swift; sourceTree = "<group>"; };
+		086BDA392AF6A87D0049AB28 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		086BDA3B2AF6A8F30049AB28 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		086BDA3D2AF6A9590049AB28 /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
+		086BDA432AF6B2330049AB28 /* ResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetView.swift; sourceTree = "<group>"; };
+		086BDA452AF6E3AF0049AB28 /* LazyLoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyLoadView.swift; sourceTree = "<group>"; };
+		086BDA482AF715D40049AB28 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		086BDA4B2AF773A90049AB28 /* DotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
+		086BDA4E2AF792230049AB28 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
+		086BDA502AF799720049AB28 /* StepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsView.swift; sourceTree = "<group>"; };
+		086BDA882AF7AE590049AB28 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		086BDA8A2AF7E0350049AB28 /* VoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteView.swift; sourceTree = "<group>"; };
+		086BDA8C2AF7FBED0049AB28 /* QualifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualifyView.swift; sourceTree = "<group>"; };
+		086BDA8E2AF826130049AB28 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		086BDA912AF880FC0049AB28 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		08ED20052AF6042000A9FECF /* Nimble Mbc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nimble Mbc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08ED20082AF6042000A9FECF /* Nimble_MbcApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nimble_MbcApp.swift; sourceTree = "<group>"; };
 		08ED200A2AF6042000A9FECF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +86,14 @@
 		08ED201F2AF6042100A9FECF /* Nimble MbcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nimble MbcUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08ED20232AF6042100A9FECF /* Nimble_MbcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nimble_MbcUITests.swift; sourceTree = "<group>"; };
 		08ED20252AF6042100A9FECF /* Nimble_MbcUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nimble_MbcUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		08ED20342AF60D8600A9FECF /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		08ED20362AF61E5900A9FECF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		08ED20442AF6520400A9FECF /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		08ED20492AF6743F00A9FECF /* NeuzeitSLTStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeuzeitSLTStd-Book.otf"; sourceTree = "<group>"; };
+		08ED204A2AF6743F00A9FECF /* NeuzeitSLTStd-BookHeavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeuzeitSLTStd-BookHeavy.otf"; sourceTree = "<group>"; };
+		08ED204B2AF6743F00A9FECF /* NeuzeitSLT-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeuzeitSLT-Regular.ttf"; sourceTree = "<group>"; };
+		08ED204C2AF6743F00A9FECF /* NeuzeitSLT-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeuzeitSLT-Bold.ttf"; sourceTree = "<group>"; };
+		08ED20512AF6746500A9FECF /* Nimble-Mbc-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Nimble-Mbc-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				086BDA422AF6AEC70049AB28 /* Resolver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +122,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		086BDA382AF6A8480049AB28 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				086BDA392AF6A87D0049AB28 /* Route.swift */,
+				086BDA3B2AF6A8F30049AB28 /* Coordinator.swift */,
+				086BDA3D2AF6A9590049AB28 /* ViewFactory.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		086BDA402AF6AEC70049AB28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		086BDA472AF715980049AB28 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				086BDA482AF715D40049AB28 /* HomeView.swift */,
+				0828D2B82AF89C16006C1A1F /* ContentHomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		086BDA4A2AF7733B0049AB28 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				086BDA4B2AF773A90049AB28 /* DotView.swift */,
+				086BDA882AF7AE590049AB28 /* PickerView.swift */,
+				086BDA8A2AF7E0350049AB28 /* VoteView.swift */,
+				086BDA8C2AF7FBED0049AB28 /* QualifyView.swift */,
+				086BDA8E2AF826130049AB28 /* QuestionView.swift */,
+				0828D2BA2AF9220C006C1A1F /* ChoiseView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		086BDA4D2AF791AC0049AB28 /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				086BDA4E2AF792230049AB28 /* SurveyView.swift */,
+				086BDA502AF799720049AB28 /* StepsView.swift */,
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		086BDA902AF8806B0049AB28 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				086BDA912AF880FC0049AB28 /* Survey.swift */,
+				0828D2B62AF891B8006C1A1F /* PageModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		08ED1FFC2AF6042000A9FECF = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +186,7 @@
 				08ED20182AF6042100A9FECF /* Nimble MbcTests */,
 				08ED20222AF6042100A9FECF /* Nimble MbcUITests */,
 				08ED20062AF6042000A9FECF /* Products */,
+				086BDA402AF6AEC70049AB28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +203,13 @@
 		08ED20072AF6042000A9FECF /* Nimble Mbc */ = {
 			isa = PBXGroup;
 			children = (
+				086BDA902AF8806B0049AB28 /* Models */,
+				086BDA4A2AF7733B0049AB28 /* Components */,
+				086BDA382AF6A8480049AB28 /* Navigation */,
+				08ED20512AF6746500A9FECF /* Nimble-Mbc-Info.plist */,
+				08ED20432AF651DF00A9FECF /* Tools */,
+				08ED20382AF62C5D00A9FECF /* Fonts */,
+				08ED20322AF60D5900A9FECF /* Screens */,
 				08ED20082AF6042000A9FECF /* Nimble_MbcApp.swift */,
 				08ED200A2AF6042000A9FECF /* ContentView.swift */,
 				08ED200C2AF6042100A9FECF /* Assets.xcassets */,
@@ -127,6 +243,46 @@
 			path = "Nimble MbcUITests";
 			sourceTree = "<group>";
 		};
+		08ED20322AF60D5900A9FECF /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				086BDA4D2AF791AC0049AB28 /* Survey */,
+				086BDA472AF715980049AB28 /* Home */,
+				08ED20332AF60D6100A9FECF /* Login */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		08ED20332AF60D6100A9FECF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				08ED20342AF60D8600A9FECF /* SplashView.swift */,
+				08ED20362AF61E5900A9FECF /* LoginView.swift */,
+				086BDA432AF6B2330049AB28 /* ResetView.swift */,
+				086BDA452AF6E3AF0049AB28 /* LazyLoadView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		08ED20382AF62C5D00A9FECF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				08ED204C2AF6743F00A9FECF /* NeuzeitSLT-Bold.ttf */,
+				08ED204B2AF6743F00A9FECF /* NeuzeitSLT-Regular.ttf */,
+				08ED20492AF6743F00A9FECF /* NeuzeitSLTStd-Book.otf */,
+				08ED204A2AF6743F00A9FECF /* NeuzeitSLTStd-BookHeavy.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		08ED20432AF651DF00A9FECF /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				08ED20442AF6520400A9FECF /* Colors.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +299,9 @@
 			dependencies = (
 			);
 			name = "Nimble Mbc";
+			packageProductDependencies = (
+				086BDA412AF6AEC70049AB28 /* Resolver */,
+			);
 			productName = "Nimble Mbc";
 			productReference = 08ED20052AF6042000A9FECF /* Nimble Mbc.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +374,9 @@
 				Base,
 			);
 			mainGroup = 08ED1FFC2AF6042000A9FECF;
+			packageReferences = (
+				086BDA3F2AF6AD460049AB28 /* XCRemoteSwiftPackageReference "Resolver" */,
+			);
 			productRefGroup = 08ED20062AF6042000A9FECF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,7 +393,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08ED204D2AF6743F00A9FECF /* NeuzeitSLTStd-Book.otf in Resources */,
+				08ED20502AF6743F00A9FECF /* NeuzeitSLT-Bold.ttf in Resources */,
+				08ED204E2AF6743F00A9FECF /* NeuzeitSLTStd-BookHeavy.otf in Resources */,
 				08ED20102AF6042100A9FECF /* Preview Assets.xcassets in Resources */,
+				08ED204F2AF6743F00A9FECF /* NeuzeitSLT-Regular.ttf in Resources */,
 				08ED200D2AF6042100A9FECF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +423,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				086BDA442AF6B2330049AB28 /* ResetView.swift in Sources */,
+				0828D2BB2AF9220C006C1A1F /* ChoiseView.swift in Sources */,
 				08ED200B2AF6042000A9FECF /* ContentView.swift in Sources */,
+				086BDA8B2AF7E0350049AB28 /* VoteView.swift in Sources */,
+				086BDA8D2AF7FBED0049AB28 /* QualifyView.swift in Sources */,
+				086BDA4C2AF773A90049AB28 /* DotView.swift in Sources */,
+				08ED20452AF6520400A9FECF /* Colors.swift in Sources */,
 				08ED20092AF6042000A9FECF /* Nimble_MbcApp.swift in Sources */,
+				086BDA922AF880FC0049AB28 /* Survey.swift in Sources */,
+				0828D2B92AF89C16006C1A1F /* ContentHomeView.swift in Sources */,
+				086BDA3A2AF6A87D0049AB28 /* Route.swift in Sources */,
+				086BDA4F2AF792230049AB28 /* SurveyView.swift in Sources */,
+				086BDA492AF715D40049AB28 /* HomeView.swift in Sources */,
+				086BDA892AF7AE590049AB28 /* PickerView.swift in Sources */,
+				08ED20372AF61E5900A9FECF /* LoginView.swift in Sources */,
+				08ED20352AF60D8600A9FECF /* SplashView.swift in Sources */,
+				086BDA512AF799720049AB28 /* StepsView.swift in Sources */,
+				086BDA3C2AF6A8F30049AB28 /* Coordinator.swift in Sources */,
+				0828D2B72AF891B8006C1A1F /* PageModel.swift in Sources */,
+				086BDA462AF6E3AF0049AB28 /* LazyLoadView.swift in Sources */,
+				086BDA8F2AF826130049AB28 /* QuestionView.swift in Sources */,
+				086BDA3E2AF6A9590049AB28 /* ViewFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +533,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -404,7 +591,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -425,11 +613,13 @@
 				DEVELOPMENT_TEAM = HSWN7BWKQ9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Nimble-Mbc-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,11 +644,13 @@
 				DEVELOPMENT_TEAM = HSWN7BWKQ9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Nimble-Mbc-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -558,7 +750,7 @@
 				08ED20282AF6042100A9FECF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		08ED20292AF6042100A9FECF /* Build configuration list for PBXNativeTarget "Nimble Mbc" */ = {
 			isa = XCConfigurationList;
@@ -567,7 +759,7 @@
 				08ED202B2AF6042100A9FECF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		08ED202C2AF6042100A9FECF /* Build configuration list for PBXNativeTarget "Nimble MbcTests" */ = {
 			isa = XCConfigurationList;
@@ -576,7 +768,7 @@
 				08ED202E2AF6042100A9FECF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		08ED202F2AF6042100A9FECF /* Build configuration list for PBXNativeTarget "Nimble MbcUITests" */ = {
 			isa = XCConfigurationList;
@@ -585,9 +777,28 @@
 				08ED20312AF6042100A9FECF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		086BDA3F2AF6AD460049AB28 /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		086BDA412AF6AEC70049AB28 /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 086BDA3F2AF6AD460049AB28 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 08ED1FFD2AF6042000A9FECF /* Project object */;
 }
