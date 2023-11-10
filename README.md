@@ -32,3 +32,8 @@
 3. Use Git during the development process. Push to a public repository on Bitbucket, Github, or Gitlab. Make regular commits and merge code using pull requests.
 4. Write unit tests using your framework of choice.
 5. Use either the REST or GraphQL endpoints. The choice is yours to make. Make sure that you use the production URLs.
+>
+# Used tools
+1. XCode 15.0.1
+2. Swift 5
+3. Resolver
