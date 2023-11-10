@@ -6,16 +6,39 @@
 //
 
 import SwiftUI
+import Resolver
 
 struct ContentView: View {
+    @State var showSplashView: Bool = true
+    @ObservedObject var navigationCoordinator = Coordinator()
+    @ObservedObject var viewModel: SplashViewModel = Resolver.resolve()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack(path: $navigationCoordinator.path) {
+            VStack {
+                if showSplashView {
+                    SplashView().onAppear{
+                        viewModel.onAppear()
+                    }
+                }
+            }
+            .onChange(of: self.viewModel.finishProcess){_ in
+                withAnimation {
+                    self.showSplashView = false
+                }
+                switch self.viewModel.statusUser {
+                case .unauthenticated:
+                    self.navigationCoordinator.goLogin()
+                case .authenticated:
+                    self.navigationCoordinator.goLoad()
+                }
+                
+            }
+            .navigationDestination(for: Route.self) { path in
+                ViewFactory.viewForDestination(path)
+            }
         }
-        .padding()
+        .environmentObject(navigationCoordinator)
     }
 }
 
