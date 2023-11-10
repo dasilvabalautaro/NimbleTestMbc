@@ -10,6 +10,8 @@ import SwiftUI
 struct HomeView: View {
     var page: PageModel
     @EnvironmentObject var navigationCoordinator: Coordinator
+    @State private var showCloset = false
+    @State private var showDate = ""
     
     var body: some View {
         ZStack {
@@ -20,7 +22,7 @@ struct HomeView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack(spacing: 0.0){
-                Text("monday, june 15")
+                Text(self.showDate)
                     .frame(width: 343, height: 30, alignment: .leading)
                     .font(Font.custom("NeuzeitSLT-Book", size: 13))
                     .textCase(/*@START_MENU_TOKEN@*/.uppercase/*@END_MENU_TOKEN@*/)
@@ -39,6 +41,9 @@ struct HomeView: View {
                     Image("icoHome", bundle: .main)
                         .resizable()
                         .frame(width: 36, height: 36)
+                        .onTapGesture {
+                            self.showCloset = true
+                        }
                         
                 }
                 .frame(width: 343)
@@ -85,9 +90,31 @@ struct HomeView: View {
                 }
                 .frame(width: 343, height: 56, alignment: .leading)
             }
+            .onAppear(){
+                self.showDate = getDateFormatDayName(date: Date())
+            }
             .padding([.top], 60)
             .padding([.bottom], 60)
         }
+        .overlay(self.showCloset ? MenuView(showCloset: self.$showCloset).transition(.asymmetric(insertion: .move(edge: .leading).combined(with: .opacity), removal: .move(edge: .leading).combined(with: .opacity))) : nil
+        )
+    }
+    
+    func getDateFormatDayName(date: Date) -> String {
+        let formatterDay = DateFormatter()
+        let formatterNameDay = DateFormatter()
+        let formatterMonth = DateFormatter()
+        formatterDay.locale = Locale(identifier: "en_US")
+        formatterMonth.locale = Locale(identifier: "en_US")
+        formatterNameDay.locale = Locale(identifier: "en_US")
+        formatterDay.dateFormat = "d"
+        formatterNameDay.dateFormat = "EEEE"
+        formatterMonth.dateFormat = "MMMM"
+        let dayString = formatterDay.string(from: date)
+        let monthString = formatterMonth.string(from: date)
+        let dayName = formatterNameDay.string(from: date)
+        
+        return "\(dayName), \(monthString) \(dayString)"
         
     }
 }

@@ -11,22 +11,28 @@ import Resolver
 struct ContentView: View {
     @State var showSplashView: Bool = true
     @ObservedObject var navigationCoordinator = Coordinator()
-    
+    @ObservedObject var viewModel: SplashViewModel = Resolver.resolve()
+
     var body: some View {
         NavigationStack(path: $navigationCoordinator.path) {
             VStack {
                 if showSplashView {
                     SplashView().onAppear{
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                            withAnimation {
-                                self.showSplashView = false
-                            }
-                        }
+                        viewModel.onAppear()
                     }
                 }
             }
-            .onChange(of: self.showSplashView){_ in
-                self.navigationCoordinator.goLogin()
+            .onChange(of: self.viewModel.finishProcess){_ in
+                withAnimation {
+                    self.showSplashView = false
+                }
+                switch self.viewModel.statusUser {
+                case .unauthenticated:
+                    self.navigationCoordinator.goLogin()
+                case .authenticated:
+                    self.navigationCoordinator.goLoad()
+                }
+                
             }
             .navigationDestination(for: Route.self) { path in
                 ViewFactory.viewForDestination(path)
