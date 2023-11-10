@@ -43,6 +43,7 @@ struct LazyLoadView: View {
             self.navigationCoordinator.goContentHome()
         }
         .onAppear(perform: {
+            self.image = Image(self.imageNames[1], bundle: .main)
             self.animate()
 //            isAnimating = true
         })
@@ -53,9 +54,11 @@ struct LazyLoadView: View {
     private func animate() {
         var imageIndex: Int = 0
         
-        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { timer in
             if imageIndex < self.imageNames.count {
-                self.image = Image(self.imageNames[imageIndex], bundle: .main)
+                withAnimation(.linear) {
+                    self.image = Image(self.imageNames[imageIndex], bundle: .main)
+                }
                 
                 imageIndex += 1
             }

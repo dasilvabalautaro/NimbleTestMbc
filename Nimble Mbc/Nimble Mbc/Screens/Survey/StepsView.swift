@@ -16,7 +16,8 @@ struct StepsView: View {
     let optionsSpace: [String] = ["Yes", "No"]
     let optionsTitles: [String] = ["How fulfilled did you feel during this WFH period?",
                                    "How did WFH change your productivity?",
-                                   "I have a separate space to work (room or living room).", "Question NPS", "Question Multi Choice"]
+                                   "I have a separate space to work (room or living room).", 
+                                   "Question NPS", "Question Multi Choice"]
     @EnvironmentObject var navigationCoordinator: Coordinator
 //    @Environment(\.dismiss) var dismiss
 
@@ -127,7 +128,7 @@ struct StepsView: View {
                     }
                     else {
                         Button {
-                            
+                            navigationCoordinator.goContentHome()
                         } label: {
                             Text("Submit")
                                 .font(Font.custom("NeuzeitSLT-BookHeavy", size: 17))

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Resolver
 
 struct ResetView: View {
     enum Field {
@@ -16,6 +17,8 @@ struct ResetView: View {
     
     @State private var email = String()
     @FocusState private var focusedField: Field?
+    @ObservedObject var viewModel: ForgotViewModel = Resolver.resolve()
+    @State private var showingAlert = false
     
     var body: some View {
         ZStack {
@@ -55,7 +58,7 @@ struct ResetView: View {
                 .focused($focusedField, equals: .email)
                 .onChange(of: focusedField) { [oldFocus = focusedField] newFocus in
                     guard oldFocus == .email, newFocus != .email else { return }
-//                    self.viewModel.onEmailChange(newValue: email)
+                    self.viewModel.onEmailChange(newValue: email)
                 }
                 .keyboardType(.emailAddress)
                 .autocapitalization(.none)
@@ -70,7 +73,7 @@ struct ResetView: View {
                 .padding([.top], 90)
                 
                 Button {
-                    
+                    self.viewModel.onForgotClick()
                 } label: {
                     Text("Reset")
                         .frame(width: 343, height: 56)
@@ -82,6 +85,18 @@ struct ResetView: View {
                 .padding([.top], 20)
                 
                 Spacer()
+            }
+            .onChange(of: viewModel.messageAlert) { _ in
+                if !viewModel.messageAlert.text.isEmpty {
+                    self.showingAlert = true
+                }
+            }
+            .alert(viewModel.messageAlert.text, isPresented: self.$showingAlert) {
+                Button("Ok", role: .cancel) {
+                    if viewModel.messageAlert.type == TypeMessage.success {
+                        navigationCoordinator.goBack()
+                    }
+                }
             }
         }
         .frame(width: 343)

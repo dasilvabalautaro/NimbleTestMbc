@@ -13,6 +13,7 @@ class Coordinator: ObservableObject {
     
     func goHome() {
         path.removeLast(path.count)
+        path.append(Route.login)
     }
     
     func goLogin() {
@@ -59,4 +60,6 @@ class Coordinator: ObservableObject {
     func goQuestion(){
         path.append(Route.question)
     }
+    
+    
 }
