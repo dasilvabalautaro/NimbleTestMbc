@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import SwiftKeychainWrapper
 
 class MenuViewModel: ObservableObject, Identifiable{
     private var usersService: UserServiceProtocol
@@ -18,14 +19,14 @@ class MenuViewModel: ObservableObject, Identifiable{
     }
     
     func onSingOutClick(){
-        if let dataObject = UserDefaults.standard.object(forKey: ConstantKeys.USER_DATA) as? Data {
+        if let dataObject = KeychainWrapper.standard.data(forKey: ConstantKeys.USER_DATA) {
             do {
                 let decoder = JSONDecoder()
                 let dataLogin = try decoder.decode(DataLogin.self, from: dataObject)
                 
                 let logout = Logout(token: dataLogin.data.attributes.access_token,
-                                    client_id: ConstantKeys.CLIENT_ID,
-                                    client_secret: ConstantKeys.CLIENT_SECRET)
+                                    client_id: KeychainWrapper.standard.string(forKey: ConstantKeys.CLIENT_ID) ?? "",
+                                    client_secret: KeychainWrapper.standard.string(forKey: ConstantKeys.CLIENT_SECRET) ?? "")
                 self.usersService.logout(logoutUser: logout)
                     .receive(on: DispatchQueue.main)
                     .sink { completion in
@@ -35,7 +36,7 @@ class MenuViewModel: ObservableObject, Identifiable{
                             case .finished: break
                         }
                     } receiveValue: { data in
-                        UserDefaults.standard.set(nil, forKey: ConstantKeys.USER_DATA)
+                        KeychainWrapper.standard.removeObject(forKey: ConstantKeys.USER_DATA)
                         self.finishApp = true
                     }
                     .store(in: &cancellables)

@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import SwiftKeychainWrapper
 
 class UserViewModel: ObservableObject, Identifiable{
     private var uiState = UserUIState()
@@ -40,8 +41,9 @@ class UserViewModel: ObservableObject, Identifiable{
         }
         
         let login = Login(grant_type: "password", email: uiState.email,
-                          password: uiState.password, client_id: ConstantKeys.CLIENT_ID,
-                          client_secret: ConstantKeys.CLIENT_SECRET)
+                          password: uiState.password, 
+                          client_id: KeychainWrapper.standard.string(forKey: ConstantKeys.CLIENT_ID) ?? "",
+                          client_secret: KeychainWrapper.standard.string(forKey: ConstantKeys.CLIENT_SECRET) ?? "")
         self.usersService.login(loginUser: login)
             .receive(on: DispatchQueue.main)
             .sink { completion in
@@ -52,8 +54,9 @@ class UserViewModel: ObservableObject, Identifiable{
                     case .finished: break
                 }
             } receiveValue: { [weak self] data in
-                UserDefaults.standard.set(data, forKey: ConstantKeys.USER_DATA)
-                UserDefaults.standard.setValue(self?.uiState.email, forKey: ConstantKeys.USER_EMAIL)
+                KeychainWrapper.standard.set(data, forKey: ConstantKeys.USER_DATA)
+                KeychainWrapper.standard.set(self?.uiState.email ?? "", forKey: ConstantKeys.USER_EMAIL)
+                
                 self?.messageAlert.text = "Welcome..."
                 self?.messageAlert.type = .success
                 
