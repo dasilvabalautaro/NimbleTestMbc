@@ -12,9 +12,11 @@ struct Nimble_MbcApp: App {
     var body: some Scene {
         
         WindowGroup {
-            ContentView().onDisappear {
-                terminateApp()
-            }
+            ContentView()
+                .onDisappear {
+                    terminateApp()
+                }
+                
         }
     }
     

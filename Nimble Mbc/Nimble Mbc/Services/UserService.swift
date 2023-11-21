@@ -10,7 +10,6 @@ import Combine
 
 protocol UserServiceProtocol: AnyObject {
     var networker: NetworkerProtocol { get }
-    
     func add(postUser: PostUser) -> AnyPublisher<Int, URLSession.DataTaskPublisher.Failure>
     func login(loginUser: Login) -> AnyPublisher<Data, Error>
     func refresh(refreshToken: Refresh) -> AnyPublisher<Data, Error>
@@ -65,7 +64,7 @@ final class UserService: UserServiceProtocol {
             let encodeObject = try self.jsonEncoder.encode(loginUser)
             let resultEncode = String(data: encodeObject, encoding: .utf8)
             self.body = resultEncode!.data(using: .utf8)
-            print(resultEncode!)
+            
         } catch {
             return Fail<Data, Error>(error: URLError(URLError.Code.badURL)).eraseToAnyPublisher()
         }
