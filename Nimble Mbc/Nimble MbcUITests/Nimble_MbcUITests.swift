@@ -8,13 +8,15 @@
 import XCTest
 
 final class Nimble_MbcUITests: XCTestCase {
-
+    var app: XCUIApplication!
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
+        app = XCUIApplication()
+        app.launch()
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
@@ -22,11 +24,10 @@ final class Nimble_MbcUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testLoginFlow() throws {
         // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
+        let message = app.images["logo"]
+        XCTAssertTrue(message.waitForExistence(timeout: 5))
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
@@ -38,4 +39,6 @@ final class Nimble_MbcUITests: XCTestCase {
             }
         }
     }
+    
+    
 }

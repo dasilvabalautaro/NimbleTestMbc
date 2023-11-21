@@ -14,8 +14,6 @@ struct LazyLoadView: View {
     @State private var finish = false
     
     var imageNames: [String] = ["transition", "transition1"]
-//    @State var isAnimating = false
-//    let transition = AnyTransition.asymmetric(insertion: .slide, removal: .scale).combined(with: .opacity)
 
     var body: some View {
         ZStack {
@@ -24,19 +22,6 @@ struct LazyLoadView: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .edgesIgnoringSafeArea(.all)
-                
-//            Image("transition1", bundle: .main)
-//                .resizable()
-//                .aspectRatio(contentMode: .fill)
-//                .frame(minWidth: 0, maxWidth: .infinity)
-//                .edgesIgnoringSafeArea(.all)
-//            Image("transition", bundle: .main)
-//                .resizable()
-//                .aspectRatio(contentMode: .fill)
-//                .frame(minWidth: 0, maxWidth: .infinity)
-//                .edgesIgnoringSafeArea(.all)
-//                .transition(transition)
-//                .animation(.default.speed(0.5), value: isAnimating)
             
         }
         .onChange(of: self.finish) {item in
@@ -45,9 +30,7 @@ struct LazyLoadView: View {
         .onAppear(perform: {
             self.image = Image(self.imageNames[1], bundle: .main)
             self.animate()
-//            isAnimating = true
         })
-//        .animation(.easeInOut.repeatForever(), value: isAnimating)
         
     }
    
@@ -63,9 +46,7 @@ struct LazyLoadView: View {
                 imageIndex += 1
             }
             else {
-//                timer.invalidate() 0.35
                 self.finish = true
-//                imageIndex = 0
             }
         }
     }

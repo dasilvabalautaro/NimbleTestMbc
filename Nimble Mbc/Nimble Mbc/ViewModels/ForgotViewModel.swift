@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import SwiftKeychainWrapper
 
 class ForgotViewModel: ObservableObject, Identifiable {
     private var uiState = UserUIState()
@@ -31,8 +32,8 @@ class ForgotViewModel: ObservableObject, Identifiable {
         
         
         let userEmail = UserEmail(email: uiState.email)
-        let forgot = Forgot(user: userEmail, client_id: ConstantKeys.CLIENT_ID,
-                            client_secret: ConstantKeys.CLIENT_SECRET)
+        let forgot = Forgot(user: userEmail, client_id: KeychainWrapper.standard.string(forKey: ConstantKeys.CLIENT_ID) ?? "",
+                            client_secret: KeychainWrapper.standard.string(forKey: ConstantKeys.CLIENT_SECRET) ?? "")
         self.usersService.forgot(forgotUser: forgot)
             .receive(on: DispatchQueue.main)
             .sink { completion in
